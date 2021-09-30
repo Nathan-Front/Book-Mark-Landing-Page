@@ -842,7 +842,7 @@ footer{
     color: white;
     background-color: var(--soft-red);
     border:1px solid transparent;
-    font-weight: 500;
+    font-size: 18px;
 }
 .form-input button:hover{
     cursor: pointer;
