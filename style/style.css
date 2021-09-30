@@ -5,19 +5,19 @@
     /*neutral colors*/
     --grayish-blue:hsl(229, 8%, 60%);
     --very-dark-blue:hsl(229, 31%, 21%);
-    /*for navigation buttons font size*/
+    /*navigation font size*/
     --font-sizeNav:1em;
-    /*for h1 font size*/
+    /*h1 font size*/
     --font-sizeh1:2.5em;
-    /*for h2 font size*/
+    /*h2 font size*/
     --font-sizeh2:1.8em;
-     /*for p font size*/   
+     /*p font size*/   
     --font-sizep:18px;
-    /*for a, button & input font size*/   
-    --font-sizeab:1em;
-     /*for label font size*/  
+    /*a, button & input font size*/   
+    --font-sizeABI:1em;
+     /*label font size*/  
      --font-sizeL:2em; 
-    /*font styles*/
+    /*font weights*/
     --font-weight4:400;
     --font-weight5:500;
 }
@@ -43,8 +43,10 @@ p,summary{
     color: var(--very-dark-blue);
 }
 a,button,input{
-    font-size: var(--font-sizeab);
+    font-size: var(--font-sizeABI);
     font-weight: var(--font-weight5);
+    color: var(--very-dark-blue);
+    text-decoration: none;
 }
 label{
     font-size: var(--font-sizeL);
@@ -53,15 +55,14 @@ label{
     font-size: var(--font-sizeNav);
     font-weight: var(--font-weight4);
 }
+ul{
+    list-style: none;
+}
 @media only screen and (max-width:1000px){
     :root{
-        /*for h1 font size*/
         --font-sizeh1:1.8em;
-        /*for h2 font size*/
         --font-sizeh2:1.5em;
-         /*for p font size*/   
         --font-sizep:1em;
-        /*for label font size*/  
         --font-sizeL:1.8em;
     }
 }
@@ -94,7 +95,6 @@ label{
 .navigation-links ul{
     margin: 0;
     padding: 0;
-    list-style:  none;
     display: flex;
     grid-gap: 1em;
     position: absolute;
@@ -108,9 +108,7 @@ label{
     align-items: center;
 }
 .navigation-links ul li a{
-    text-decoration: none;
     padding: .5em 1em;
-    color: var(--very-dark-blue);
     border-radius: 5px;
     border: 1px solid transparent;
     text-transform: uppercase;
@@ -306,7 +304,6 @@ label{
     margin: 2em 2.5em 3.5em 0;
 }
 .main-article-button{
-    list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
@@ -314,10 +311,8 @@ label{
 }
 .main-article-button li a{
     padding: .8em 1em;
-    text-decoration: none;
     border-radius: 5px;
     box-shadow: 0 3px 2px var(--grayish-blue);
-    color: var(--very-dark-blue);
     border: 1px solid transparent;
 }
 .main-article-button li:nth-child(1) a{
@@ -402,7 +397,7 @@ label{
 
 /*sub article content*/
 .sub-article{
-    margin: 5em 0 0 0;
+    margin: 3em 0 0 0;
     padding: 0;
     display: flex;
     align-items: center;
@@ -420,7 +415,6 @@ label{
 .sub-article-button{
     margin: 3em 0 0 0;
     padding: 0;
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -440,15 +434,13 @@ label{
     font-weight: var(--font-weight5);
 }
 .sub-article-button li a{
-    text-decoration: none;
-    color: var(--very-dark-blue);
     font-weight: normal;
 }
 .sub-article-button li a:hover{
     color: var(--soft-red);
 }
 .sub-article-image{
-    margin: 5em 0 0 0;
+    margin: 4em 0 0 0;
     padding: 0;
     display: flex;
     grid-gap: 9em;
@@ -479,7 +471,6 @@ label{
     margin: 2em 1.5em 3em 0;
 }
 .sub-article-image-text a{
-    text-decoration: none;
     background: var(--soft-blue);
     padding: 1em 1.5em;
     border-radius: 5px;
@@ -578,7 +569,6 @@ label{
 .card-display{
     margin: 5em 0 0 0;
     padding: 0;
-    list-style: none;
     display: flex;
     grid-gap: 3em;
 }
@@ -702,10 +692,10 @@ label{
     padding: .5em 0;
     width: 45%;
     position: relative;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--grayish-blue);
 }
 .faq-contents details:nth-child(3){
-    border-top: 1px solid gray;
+    border-top: 1px solid var(--grayish-blue);
 }
 .summary-detail-text{
     margin: 1.5em 0 0 0;
@@ -741,7 +731,6 @@ details[open] summary ~ * {
 }
 .faq-contents a{
     margin: 2.5em 0 0 0;
-    text-decoration: none;
     background: var(--soft-blue);
     padding: .9em 1.3em;
     border-radius: 5px;
@@ -795,7 +784,7 @@ details[open] summary ~ * {
 
 
 footer{
-    margin: 0;
+    margin: 5em 0 0 0;
     padding: 0;
     width: 100%;
     display: flex;
@@ -853,6 +842,7 @@ footer{
     color: white;
     background-color: var(--soft-red);
     border:1px solid transparent;
+    font-weight: 500;
 }
 .form-input button:hover{
     cursor: pointer;
@@ -902,7 +892,6 @@ footer{
     padding: 0;
 }
 .footer-nav{
-    list-style: none;
     margin: 0 0 0 5em;
     padding: 0;
     display: flex;
@@ -917,7 +906,6 @@ footer{
 .footer-nav li a{
     margin: 0;
     padding: 0;
-    text-decoration: none;
     color:white;
     text-transform: uppercase;
 }
