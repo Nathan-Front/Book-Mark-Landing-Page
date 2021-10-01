@@ -327,6 +327,8 @@ ul{
     vertical-align: middle;
 }
 .main-article-image img{
+    width: 41em;
+    height: 29em;
     margin: 0;
     padding: 0;
     z-index: 9;
@@ -374,6 +376,7 @@ ul{
     }
     .main-article-image img{
         width: 100%;
+        height: 16em;
     }
     .main-article-button li:nth-child(1) a:hover{
         background-color: var(--soft-blue);
@@ -437,6 +440,8 @@ ul{
     grid-gap: 9em;
 }
 .sub-article-image img{
+    width: 33.5em;
+    height: 21.7em;
     position: relative;
     z-index: 9;
 }
@@ -516,6 +521,7 @@ ul{
     }
     .sub-article-image img{
         width: 90%;
+        height: 13em;
     }
     .sub-article-image-text{
         margin: 0;
