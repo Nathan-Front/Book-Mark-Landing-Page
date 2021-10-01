@@ -376,7 +376,7 @@ ul{
     }
     .main-article-image img{
         width: 100%;
-        height: 16em;
+        height: auto;
     }
     .main-article-button li:nth-child(1) a:hover{
         background-color: var(--soft-blue);
@@ -521,7 +521,7 @@ ul{
     }
     .sub-article-image img{
         width: 90%;
-        height: 13em;
+        height: auto;
     }
     .sub-article-image-text{
         margin: 0;
