@@ -12,20 +12,20 @@
     <header class="header">
         <img class="header_logo" src="images/logo-bookmark.svg" alt="" aria-hidden="true">
         <div class="burger-menu" id="burger-links">
-            <img src="images/icon-hamburger.svg" alt="" id="burger-button">
+            <img src="images/icon-hamburger.svg" alt="open mobile links" id="burger-button">
         </div>
         <nav class="navigation-links">
             <ul id="menu-links">
                 <li class="mobile_menu">
-                    <img src="images/logo-white.svg" alt="">
-                    <img src="images/icon-close.svg" alt="" id="mobile-close">
+                    <img src="images/logo-white.svg" alt="" aria-hidden="true">
+                    <img src="images/icon-close.svg" alt="close mobile links" id="mobile-close">
                 </li>
-                <li><a href="#" class="nav-a">feature</a></li>
-                <li><a href="#" class="nav-a">pricing</a></li>
-                <li><a href="#" class="nav-a">contact</a></li>
+                <li><a href="#" class="nav-a mobile-nav-menu">feature</a></li>
+                <li><a href="#" class="nav-a mobile-nav-menu">pricing</a></li>
+                <li><a href="#" class="nav-a mobile-nav-menu">contact</a></li>
                 <li><a href="#" class="nav-a">login</a></li>
                 <li>
-                    <a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com"><img src="images/icon-facebook.svg" alt="facebook"></a>
                     <a href="#"><img src="images//icon-twitter.svg" alt="twitter"></a>
                 </li>
             </ul>
@@ -111,11 +111,13 @@
         </section>
     </main>
     <footer>
-        <form class="footer-form">
+        <form id="form" class="footer-form" action="#">
             <small>35,000+ already joined</small>
             <label>Stay up-to-date with what we’re doing</label>
             <div class="form-input">
-                <input type="email" placeholder="Enter your email address">
+                <input id="email" type="email" placeholder="Enter your email address">
+                <img src="images/icon-error.svg" alt="" aria-hidden="true">
+                <span>This is an error</span>
                 <button class="form-button">Contact Us</button>
             </div>
         </form>
@@ -132,6 +134,6 @@
             </div>
         </nav>
     </footer>
-<script src="javascript/script.js"></script>
+<script src="javascript/script.js"></script>    
 </body>
 </html>
