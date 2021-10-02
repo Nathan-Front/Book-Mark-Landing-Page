@@ -85,14 +85,14 @@ ul{
 .burger-menu{
     visibility: hidden;
 }
-.navigation-links{
+.header-links{
     margin: 0;
     padding: 0;
     height: 100%;
     display: flex;
     align-items: center;
 }
-.navigation-links ul{
+.header-links ul{
     margin: 0;
     padding: 0;
     display: flex;
@@ -100,36 +100,36 @@ ul{
     position: absolute;
     right: 1em;
 }
-.navigation-links ul li{
+.header-links ul li{
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.navigation-links ul li a{
+.header-links ul li a{
     padding: .5em 1em;
     border-radius: 5px;
     border: 1px solid transparent;
     text-transform: uppercase;
 }
-.navigation-links ul li a:hover{
+.header-links ul li a:hover{
     border: 1px solid var(--soft-red);
     color: var(--soft-red);
 }
-.navigation-links ul li:nth-child(5) a{
+.header-links ul li:nth-child(5) a{
     color: white;
     padding: .5em 1.5em;
 }
-.navigation-links ul li:nth-child(5) a:hover{
+.header-links ul li:nth-child(5) a:hover{
     background: white;
     color: var(--soft-red);
 }
-.navigation-links ul li:nth-child(5){
+.header-links ul li:nth-child(5){
     background: var(--soft-red);
     border-radius: 5px;
 }
-.navigation-links ul li:nth-child(6){
+.header-links ul li:nth-child(6){
    display: none;
 }
 @media only screen and (max-width:1000px){
@@ -152,7 +152,7 @@ ul{
         right: 0;
         visibility: visible;
     }
-    .navigation-links ul{
+    .header-links ul{
         display: none;
     }
     .header nav ul.menuLinks{
@@ -170,7 +170,7 @@ ul{
         background-color: var(--very-dark-blue);
         opacity: .97;
     }
-    .navigation-links ul.menuLinks {
+    .header-links ul.menuLinks {
         animation: slidein 800ms ease-in-out;
     }
     @keyframes slidein {
@@ -179,46 +179,46 @@ ul{
         to { margin-left: 0%;
              width: 100%;}
       }
-    .navigation-links ul li{
+    .header-links ul li{
         width: 80%;
         margin: 0 auto;
     }
-    .navigation-links ul li:nth-child(1){
+    .header-links ul li:nth-child(1){
         justify-content: left;
         align-items: center;
         margin: 1.7em auto 1.5em auto;
         width: 80%;
         position: relative;
     }
-    .navigation-links ul li a{
+    .header-links ul li a{
         color: white;
         margin: 0 0 0 0;
         padding: 0;
         border-radius: unset;
     }
-    .navigation-links ul .mobile-nav-menu{
+    .header-links ul .mobile-nav-menu{
         width: 100%;
         padding: .5em 0;
         text-align: center;
     }
-    .navigation-links ul li:nth-child(2) a{
+    .header-links ul li:nth-child(2) a{
         border-top: 1px solid var(--grayish-blue);
         margin: 1em 0 0 0;
     }
-    .navigation-links ul li:nth-child(3) a{
+    .header-links ul li:nth-child(3) a{
         border-top: 1px solid var(--grayish-blue);
         border-bottom: 1px solid var(--grayish-blue);   
     }
-    .navigation-links ul li:nth-child(4) a{
+    .header-links ul li:nth-child(4) a{
         border-bottom: 1px solid var(--grayish-blue);
     }
-    .navigation-links ul li:nth-child(5){
+    .header-links ul li:nth-child(5){
         background: unset;
         border: 1px solid var(--grayish-blue);
         padding: 0 0;
         margin: 1em auto;
     }
-    .navigation-links ul li:nth-child(6){
+    .header-links ul li:nth-child(6){
         margin: 7em 0 0 0;
         padding: 0;
         display: flex;
@@ -227,30 +227,30 @@ ul{
         width: 100%;
         grid-gap: 1em;
     }
-    .navigation-links ul li:nth-child(6) a img{
+    .header-links ul li:nth-child(6) a img{
         margin: 0 0 0 0;
     }
-    .navigation-links ul li a:hover{
+    .header-links ul li a:hover{
         border-left: 1px solid transparent;
         border-right: 1px solid transparent;
         color: white;
     }
-    .navigation-links ul li:nth-child(2) a:hover{
+    .header-links ul li:nth-child(2) a:hover{
         border-bottom: 1px solid transparent;
     }
-    .navigation-links ul li:nth-child(3) a:hover{
+    .header-links ul li:nth-child(3) a:hover{
         border-top: 1px solid var(--grayish-blue);
         border-bottom: 1px solid var(--grayish-blue);
     }
-    .navigation-links ul li:nth-child(4) a:hover{
+    .header-links ul li:nth-child(4) a:hover{
         border-top: 1px solid transparent;
     }
-    .navigation-links ul li:nth-child(5) a:hover{
+    .header-links ul li:nth-child(5) a:hover{
         background: transparent;
         color: white;
         border: 1px solid transparent;
     }
-    .navigation-links ul li:nth-child(6) a:hover{
+    .header-links ul li:nth-child(6) a:hover{
         border: 1px solid transparent;
     }
 }
