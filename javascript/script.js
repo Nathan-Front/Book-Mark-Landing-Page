@@ -55,3 +55,89 @@ function sendSuccesfulMessage(input, message){
 function emailFormat(email){
     return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
+
+// My original code for catching the active class and changing the feature content
+// you can delete this
+/*
+function changeImage(){
+        const firstButton = document.getElementById('simple-bookmark');
+        const secondButton = document.getElementById('speedy-search');
+        const thirdButton = document.getElementById('easy-share');
+        const images = document.getElementById('images');
+
+
+        firstButton.addEventListener('click', function(){
+            firstImage();
+        });
+        secondButton.addEventListener('click', function(){
+            secondImage();
+        });
+        thirdButton.addEventListener('click', function(){
+            thirdImage();
+        });
+        function firstImage(){
+            images.src = 'images/illustration-features-tab-1.svg';
+            document.getElementById("feature-title").innerText = "Bookmark in one click";
+            document.getElementById("feature-text").innerText = "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.";
+            
+        }
+        function secondImage(){
+            images.src = 'images/illustration-features-tab-2.svg';
+            document.getElementById("feature-title").innerText = "Intelligent search";
+            document.getElementById("feature-text").innerText = "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.";
+            document.getElementById("speedy-search").style.border = "border-bottom: 3px solid red";
+            activeSecond.classList.add("active");
+        }
+        function thirdImage(){
+            images.src = 'images/illustration-features-tab-3.svg';
+            document.getElementById("feature-title").innerText = "Share your bookmarks";
+            document.getElementById("feature-text").innerText = "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.";
+            thirdButton.className = 'border-bottom-color bottom-focus2';
+       }
+}
+*/
+
+const firstButton = document.getElementById('simple-bookmark').onclick = featuresClick;
+const secondButton = document.getElementById('speedy-search').onclick = featuresClick;
+const thirdButton = document.getElementById('easy-share').onclick = featuresClick;
+const images = document.getElementById('images');
+
+// Get the container of all button of Feature
+var featuresButton = document.getElementById("feature-links");
+// Get all the button of Feature
+var featuresButtonCount = featuresButton.getElementsByClassName("border-bottom-color");
+
+function featuresClick() {
+    const clickedButton = this.id;
+// Loop through the buttons and add the active class to the current/clicked button + text contents
+for (var i = 0; i < featuresButtonCount.length; i++) {
+    featuresButtonCount[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      // If there's no active class
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+        // Statements to display the feature contents on clicked button 
+        if(clickedButton === 'simple-bookmark'){
+            images.src = 'images/illustration-features-tab-1.svg';
+            document.getElementById("feature-title").innerText = "Bookmark in one click";
+            document.getElementById("feature-text").innerText = "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.";
+    
+        }else if(clickedButton === 'speedy-search'){
+            images.src = 'images/illustration-features-tab-2.svg';
+            document.getElementById("feature-title").innerText = "Intelligent search";
+            document.getElementById("feature-text").innerText = "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.";
+            
+        }else if(clickedButton === 'easy-share'){
+            images.src = 'images/illustration-features-tab-3.svg';
+            document.getElementById("feature-title").innerText = "Share your bookmarks";
+            document.getElementById("feature-text").innerText = "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.";
+        }
+      }
+      // Add the active class to the current/clicked button
+      this.className += " active";
+    });
+  // To stop the page from reloading when button was clicked  
+  }return false;
+}   
+
+
